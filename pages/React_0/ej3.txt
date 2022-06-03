@@ -1,0 +1,8 @@
+
+0.3) REACTCero. 
+
+En base al ejercicio anterior, crear nuevo programa, cambiar nota=5 por edad=21
+
+Cambiar código para que:
+Si la edad es menor que 18 años, aparece la frase: “Acceso no permitido”. 
+Si es mayor que 18, aparece la frase “OK. Acceso permitido”
