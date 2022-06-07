@@ -8,19 +8,17 @@ Si la edad es menor que 18, contesta: “Menor de edad”
 
 export default function ProgramaMayorEdad (){
 
-    const edad = 12
+    const edad = 26
 
     function comprobar(valor){
 
         const edad = Number(valor)
         
-        //no tengo claro que esto funcione al 100%
-        const resultado = (edad < 18) ?  `Menor de edad`
+        /*no tengo claro que esto funcione al 100% No estoy seguro pero creo 
+        en el enunciado hay un error o conflicto entre la condición 1 y 2 en los < 65 años*/
+        const resultado = (edad < 65 && edad > 18) ?  `No es tercera edad.`
                             : (edad > 25 && edad < 65) ? `Adulto adecuado` 
-                            :`No es tercera edad.`
-        
-                                     
-
+                            :`Menor de edad.`
         return resultado
     }
 
