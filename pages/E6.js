@@ -7,6 +7,7 @@ c) Los menores de edad no pagan.
 */
 
 export default function ProgramaPrecio () {
+    
     const edad = 10
 
     function comprobar(dato){
@@ -15,9 +16,9 @@ export default function ProgramaPrecio () {
     
         const resultado = (edad >= 65) ? 0
     
-        : (edad >=18) ? 1
+            : (edad >=18) ? 1
     
-        : `Los menores de edad no pagan.`
+            : `Los menores de edad no pagan.`
     
         return resultado
     }
@@ -36,6 +37,7 @@ export default function ProgramaPrecio () {
     }
     
     return (
+        
         <div>
      
         <h2>Precio billete autobús</h2>
