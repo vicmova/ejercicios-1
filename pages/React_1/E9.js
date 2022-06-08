@@ -39,18 +39,19 @@ export default function ProgramaGrados () {
                     <p> En Farenheit son: {grados} o</p>
                 </div>
                 )
-        /* En el seguno return vemos que se llama a la función inicio que recibe la constante 
-           temperatura como parámetro. Comparado con el siguiente código, es diferente porque 
-           devuelve un <h3< con texto diferente y el componente <Termometro dato={temperatura} />
-           si dejamos el cursor del ratón sobre Temperatura veremos un mensaje que describe: 
+        /* 
+        En el seguno return vemos que se llama a la función inicio que recibe la constante 
+        temperatura como parámetro. Comparado con el siguiente código, es diferente porque 
+        devuelve un <h3< con texto diferente y el componente <Termometro dato={temperatura} />
+        si dejamos el cursor del ratón sobre Temperatura veremos un mensaje que describe: 
                 const Termometro: ({ dato }: {
                 dato: any;
                 }) => JSX.Element
 
-                Termometro es un elemento JSX, tiene una propiedad que es dato 
-                de tipo any (puede recibir cualquier valor) y recibe el valor
-                almacenado en la constante temperatura, si pidieramos introducir datos a un supuesto
-                usuario se guardaría en temperatura, en este caso lo declaramos como constante.
+        Termometro es un elemento JSX, tiene una propiedad que es dato de tipo any 
+        (puede recibir cualquier valor) y recibe el valor almacenado en la constante 
+        temperatura, si pidieramos introducir datos a un supuesto usuario se guardaría 
+        en temperatura, en este caso lo declaramos como constante.
         */
     }
         return (
