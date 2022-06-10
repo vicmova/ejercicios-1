@@ -1,3 +1,11 @@
+/* 
+gestión formulario controlada. 
+Valor del input = controlado por React a través de un estado
+
+falta incluir validar tipo de dato
+
+*/
+
 import { useState } from 'react';
 
 const ProgramaNotas =() => {
@@ -24,16 +32,15 @@ const ProgramaNotas =() => {
 
     return(
         
-        <form onSubmit={ ev =>{
-            ev.preventDefault();
-            console.log(ev.target.search.value);
-             //así toma el valor del formulario
-            setNota(ev.target.search.value);
-        }}
-        
-        >
+        <form>
             <h2>Comprobador de calificaciones</h2>
-            <input type='text' name='search' autoComplete='off' onDoubleClick={asignaNota}></input>
+            <input 
+                type='text' 
+                name='comprueba' 
+                autoComplete='off'
+                value={nota}
+                onChange={ev => setNota(ev.target.value)}></input>
+                
 
             <button type ='submit'>Comprueba tu nota</button>
             <p> Ahora la nota es: {nota}</p>
@@ -44,10 +51,5 @@ const ProgramaNotas =() => {
 
 export default ProgramaNotas;
 
-/* 
-    <input
-                type='text'
-                id='nota'
-                onDoubleClick={asignaNota}
-            />
-*/
+//value='' en el input se refiere al estado actual.
+//value={nota} = React gestiona el input nota. 
