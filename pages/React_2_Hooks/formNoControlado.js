@@ -3,6 +3,7 @@ const App = () => {
 autoComplete='off' oculta sugerencias del navegador
 botón activa el vento submit del form que podremos recoger
 mediante la propiedad onSubmit={ev=>console.log(ev.target.search.value)}
+search=valor del atributo name del input
 */  
     return(
         <form onSubmit={ev=>
