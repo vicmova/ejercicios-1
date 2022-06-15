@@ -1,12 +1,17 @@
+/*
 import { useState } from "react";
 
 const App = () => {
-/*
+
 Ejemplo 1. gestión de fom no controlada, gestión por defecto. 
 autoComplete='off' oculta sugerencias del navegador.
 Botón activa el evento submit del form que podremos recoger
 mediante la propiedad onSubmit={ev=>console.log(ev.target.search.value)}
 search=valor del atributo name del input
+
+import { useState } from "react";
+
+const App = () => {
 
    return(
         <form onSubmit={ev=>
@@ -19,6 +24,9 @@ search=valor del atributo name del input
             <button type='submit'>Buscar</button>
         </form>
     );
+    }
+
+export default App;
 
 */
 
@@ -28,6 +36,10 @@ Cada vez que hacemos click seteamos (establecemos configuración) el estado.
 En este caso React no es capaz de controlar los valores del input. Sólo reacciona 
 a un vente(en este caso, hacer click), no podemos modificar el valor ni leerlo cuando
 queramos, dependemos del evento.
+
+import { useState } from "react";
+
+const App = () => {
 
 const [search, setSearch] = useState('');
     return(
@@ -44,6 +56,8 @@ const [search, setSearch] = useState('');
             <p>Resultado: {search}</p>
         </form>
     );
+    }
+    export default App;
     */
 
     /*
@@ -53,8 +67,14 @@ const [search, setSearch] = useState('');
     input, sin embargo, sólo podemos acceder al valor dentro de:
     onChange={ev=>setSearch(ev.target.value)}> No hay relación bilateral
     entre el input y el estado.
-    */
+    import { useState } from "react";
+
+    const App = () => {
+    
     const [search, setSearch] = useState('');
+
+    if(search === 'palabra') setSearch('¿Estás seguro?')
+
     return(
         <form>
             <input type='text' 
@@ -67,10 +87,37 @@ const [search, setSearch] = useState('');
             <p>Resultado: {search}</p>
         </form>
     );
-    /* 
-    Ejemplo 3. Gestión de forma controlada. React controla el valor del input
-    a través del estado.
+    }
+
+    export default App;
     */
+    /* 
+    Ejemplo 4. Gestión de forma controlada. React controla el valor del input
+    a través del estado. Propiedad value del input no cambia, es el valor actual, nunca
+    cambia. Podemos setear value mediante una propiedad que si cambia. 
+    */
+    import { useState } from "react";
+
+    const App = () => { 
+
+    const [search, setSearch] = useState('');
+
+    if(search === 'palabra') setSearch('¿Estás seguro?')
+
+    return(
+        <form>
+            <input type='text' 
+                name='search'
+                autoComplete='off' 
+                //value='Ejemplo no cambia'
+                value={search}
+                onChange={ev=>setSearch(ev.target.value)}>
+            </input>
+            
+            <button type='submit'>Buscar</button>
+            <p>Resultado: {search}</p>
+        </form>
+    );
 }
 
 export default App;
