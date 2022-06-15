@@ -95,7 +95,7 @@ const [search, setSearch] = useState('');
     Ejemplo 4. Gestión de forma controlada. React controla el valor del input
     a través del estado. Propiedad value del input no cambia, es el valor actual, nunca
     cambia. Podemos setear value mediante una propiedad que si cambia. 
-    */
+    
     import { useState } from "react";
 
     const App = () => { 
@@ -118,6 +118,88 @@ const [search, setSearch] = useState('');
             <p>Resultado: {search}</p>
         </form>
     );
+}
+
+export default App;
+*/
+
+/*
+Ejemplo 6 Login con form no controlado.  
+
+const App = () => {
+
+    return(
+        <form onSubmit={ev => {
+            ev.preventDefault();
+
+            const email = ev.target.email.value;
+            const password = ev.target.password.value;
+
+            login(email,password);
+        }}>
+            <input
+                type='text'
+                name='email'
+                placeholder="Email"
+                autoComplete="off"
+            ></input>
+
+            <input type='password' name='password' placeholder='Contraseña'></input>
+            <button type='submit'>Iniciar sesión</button>
+        </form>
+    );
+
+};
+//función para hacer login
+
+const login = (email, password)=>{
+
+    if(email === 'hola@react.com' && password === '1234')
+        
+    alert('Bienvenido');
+
+    else alert('Contraseña incorrecta!');
+}
+
+export default App;
+*/
+/*
+Ejemplo 7 Login con form controlado. 
+*/ 
+
+const App = () => {
+
+    return(
+        <form onSubmit={ev => {
+            ev.preventDefault();
+
+            const email = ev.target.email.value;
+            const password = ev.target.password.value;
+
+            login(email,password);
+        }}>
+            <input
+                type='text'
+                name='email'
+                placeholder="Email"
+                autoComplete="off"
+            ></input>
+
+            <input type='password' name='password' placeholder='Contraseña'></input>
+            <button type='submit'>Iniciar sesión</button>
+        </form>
+    );
+
+};
+//función para hacer login
+
+const login = (email, password)=>{
+
+    if(email === 'hola@react.com' && password === '1234')
+        
+    alert('Bienvenido');
+
+    else alert('Contraseña incorrecta!');
 }
 
 export default App;
