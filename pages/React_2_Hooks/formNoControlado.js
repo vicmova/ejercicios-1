@@ -1,4 +1,5 @@
 const App = () => {
+    
 /*gestión de fom no controlada, gestión por defecto. 
 autoComplete='off' oculta sugerencias del navegador
 botón activa el vento submit del form que podremos recoger
