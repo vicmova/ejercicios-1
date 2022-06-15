@@ -30,7 +30,7 @@ export default App;
 
 */
 
-/*
+/*---------------------------------------------------------------------------------------------------------
 Ejemplo 2. Nos interesa almacenar el valor del input dentro del estado. 
 Cada vez que hacemos click seteamos (establecemos configuración) el estado. 
 En este caso React no es capaz de controlar los valores del input. Sólo reacciona 
@@ -60,13 +60,14 @@ const [search, setSearch] = useState('');
     export default App;
     */
 
-    /*
+    /*------------------------------------------------------------------------------------------------
     Ejemplo 3. Actualizar in utilizar el evento onSubmit.
     Utilizamos la propiedad onChange del input. En este caso
     el acceso es más dinámico a setSearch, accedemos mejor al valor del 
     input, sin embargo, sólo podemos acceder al valor dentro de:
     onChange={ev=>setSearch(ev.target.value)}> No hay relación bilateral
     entre el input y el estado.
+    
     import { useState } from "react";
 
     const App = () => {
@@ -91,7 +92,8 @@ const [search, setSearch] = useState('');
 
     export default App;
     */
-    /* 
+
+    /*-----------------------------------------------------------------------------------------------------
     Ejemplo 4. Gestión de forma controlada. React controla el valor del input
     a través del estado. Propiedad value del input no cambia, es el valor actual, nunca
     cambia. Podemos setear value mediante una propiedad que si cambia. 
@@ -123,8 +125,10 @@ const [search, setSearch] = useState('');
 export default App;
 */
 
-/*
-Ejemplo 6 Login con form no controlado.  
+/*----------------------------------------------------------------------------------------------------------
+Ejemplo 5 Login con form no controlado. 
+
+import { useState } from "react";
 
 const App = () => {
 
@@ -163,18 +167,25 @@ const login = (email, password)=>{
 
 export default App;
 */
-/*
-Ejemplo 7 Login con form controlado. 
+
+/*-------------------------------------------------------------------------------------------------------
+Ejemplo 6 Login con form controlado. 
 */ 
+
+import { useState } from "react";
 
 const App = () => {
 
+    const [email, setEmail] = useState('')
+    const [password, setPassword] = useState('')
+    
     return(
         <form onSubmit={ev => {
             ev.preventDefault();
 
-            const email = ev.target.email.value;
-            const password = ev.target.password.value;
+            //ya no necesitamos extraer el mail y password de aquí, lo tenemos en el estado.
+            //const email = ev.target.email.value;
+            //const password = ev.target.password.value;
 
             login(email,password);
         }}>
@@ -183,9 +194,20 @@ const App = () => {
                 name='email'
                 placeholder="Email"
                 autoComplete="off"
+                value={email}
+                onChange={ev => setEmail(ev.target.value)}
             ></input>
 
-            <input type='password' name='password' placeholder='Contraseña'></input>
+            <input
+                type='text'
+                name='password'
+                placeholder="Contraseña"
+                autoComplete="off"
+                value={password}
+                onChange={ev => setPassword(ev.target.value)}
+            ></input>
+
+           
             <button type='submit'>Iniciar sesión</button>
         </form>
     );
