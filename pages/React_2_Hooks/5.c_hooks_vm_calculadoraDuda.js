@@ -21,14 +21,19 @@ export default function Calculadora() {
     const suma = parseInt(n1) + parseInt(n2)
     const resta = parseInt(n1) - parseInt(n2)
     
-    
     //optimizar con la opción de seleccionar operación? 
-    
     
     const resultadoMultiplicar = multiplica ? multiplica : 'introducir números entre 1 y 10'
     const resultadoDividir = divide ? divide : 'introducir números entre 1 y 10'
     const resultadoSumar = suma ? suma : 'introducir números entre 1 y 10'
     const resultadoRestar = resta ? resta : 'introducir números entre 1 y 10'
+    
+    /* probar si funciona, añadir saltos de línea: 
+        <div>
+            <h4>Resultados: {resultadoMultiplicar, resultadoDividir, resultadoSumar, resultadoRestar}</h4>
+           
+        </div>
+    */
     
     return (
     
