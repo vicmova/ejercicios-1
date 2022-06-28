@@ -22,7 +22,7 @@ export default function Calculadora() {
     const resta = parseInt(n1) - parseInt(n2)
     
     
-    //optimizar con la opción de seleccionar operación. 
+    //optimizar con la opción de seleccionar operación? 
     
     
     const resultadoMultiplicar = multiplica ? multiplica : 'introducir números entre 1 y 10'
