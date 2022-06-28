@@ -29,10 +29,10 @@ export default function Calculadora() {
     return (
     
         <div>
-            <h3>Resultado de la multiplicación: {resultadoMultiplicar}</h3>
-            <h3>Resultado de la división: {resultadoDividir}</h3>
-            <h3>Resultado de la suma: {resultadoSumar}</h3>
-            <h3>Resultado de la resta: {resultadoRestar}</h3>
+            <h4>Resultado de la multiplicación: {resultadoMultiplicar}</h4>
+            <h4>Resultado de la división: {resultadoDividir}</h4>
+            <h4>Resultado de la suma: {resultadoSumar}</h4>
+            <h4>Resultado de la resta: {resultadoRestar}</h4>
         </div>
         
         )
