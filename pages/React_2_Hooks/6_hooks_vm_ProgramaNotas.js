@@ -16,12 +16,6 @@ const [valores, setValores] = useState(valores_iniciales)
 const comprobarNota=(e) => {
 const {value} = e.target
 
-/*
- const resultado = (edad < 65 && edad > 18) ?  `No es tercera edad.`
-                            : (edad > 25 && edad < 65) ? `Adulto adecuado` 
-                            :`Menor de edad.`
-*/
-
 const texto = (value >= 5 && value < 7) ? `Aprobada`
                 : (value >= 7 && value < 9) ? `NOTABLE`
                 : (value >= 9) ? `SOBRESALIENTE`
