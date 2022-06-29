@@ -28,6 +28,7 @@ const comprobarEdad = (e) => {
 return (
         <div>
             <h2>css aplicado: {valorColor}</h2>
+            
             <div className={valorColor} >
                 <input type='text'
                 id='edad'
