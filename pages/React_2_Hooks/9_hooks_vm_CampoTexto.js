@@ -10,10 +10,10 @@ export default function CampoTexto () {
 
     const [valorColor, setValorColor] = useState('fondoVerde')
 
-    const establecerRojo = () => {
+    /*const establecerRojo = () => {
 
         setValorColor('fondoRojo')
-}
+    }*/
 
 const comprobarEdad = (e) => {
     const {value} = e.target
@@ -51,7 +51,7 @@ return (
 
                     .fondoAzul {
                     background-color: #0248c2;
-                    font-family: "Arial"
+                    font-family: "Tahoma"
                     }
             
                 `}</style>
