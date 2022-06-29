@@ -1,7 +1,7 @@
 /*10) REACT - Hooks Añadir código para que, 
 si la edad no es correcta, el fondo sea rojo.*/
 
-/*
+/*NO ESTÁ LISTO!
 ver:
 https://www.youtube.com/watch?v=PhddxZmnv0Y&list=PLjU2Ord0op_MyDzCJhBjcjW2yTrQSr8sL
 */
