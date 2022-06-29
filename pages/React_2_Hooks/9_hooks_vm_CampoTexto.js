@@ -29,12 +29,11 @@ return (
         <div>
             <h2>css aplicado: {valorColor}</h2>
             <div className={valorColor} >
-            <input type='text'
-            id='edad'
-            name='campo_edad'
-            onDoubleClick={comprobarEdad}
-        />
-        </div>
+                <input type='text'
+                id='edad'
+                name='campo_edad'
+                onDoubleClick={comprobarEdad}/>
+            </div>
 
         <style jsx>{`
                     .fondoRojo {
