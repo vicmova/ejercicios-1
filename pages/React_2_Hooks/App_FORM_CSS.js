@@ -62,12 +62,61 @@ export default App;
 ///////////////////////////////////File = App.CSS en directorio src
 
 
+
 .form_container {
-    padding: 10px;
+    padding: 20px;
 }
 
 .form_header {
-  background-image: url("rungler.png");
+  height: 650px;
+  
+  
+}
+
+.form_title {
+  color: rgb(163, 160, 160);
+  padding-top: 10px;
+  padding-left: 5px;
+  font-size: 40px;
+  text-shadow: 2px 2px 2px black;
+}
+
+.form_body {
+  background-image: url("800px-Chua's_circuit_with_Chua_diode.png");
   width: 100%;
-  height: 1200px;
+  height: 650px;
+  background-size: cover;
+  background-color: rgb(251, 246, 246);
+}
+
+.form_form {
+  padding: 20px;
+  text-align: left;
+  display: block;
+}
+
+.form_input {
+  
+  color: rgb(91 88 88);
+
+}
+
+.form_button:hover {
+  padding: 10px;
+  background-color: black;
+  border-radius: 10px;
+  padding-left: 10px;
+  padding-right: 10px;
+  color: white
+
+ 
+}
+
+.form_footer {
+
+  width: 100%;
+  height: 40px;
+  background-color: rgb(201, 194, 194);
+
+
 }
