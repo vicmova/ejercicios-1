@@ -58,3 +58,16 @@ function App() {
 }
 
 export default App;
+
+///////////////////////////////////File = App.CSS en directorio src
+
+
+.form_container {
+    padding: 10px;
+}
+
+.form_header {
+  background-image: url("rungler.png");
+  width: 100%;
+  height: 1200px;
+}
