@@ -27,19 +27,21 @@ function App() {
 
         <div className='form_container'>
             <div className='form_header'>
-                <h2 className='form_title'>Formulario</h2>
+                <h2 className='form_title'>Chaotic components</h2>
             
             <div className='form_body'>
-                <div className='form_Form'>
-                    <label className='form_label: '></label>
-                    
-                    <input className='form_input'
-                        id="nombre"
-                        value={nombre}
-                        onChange={cambiarNombre}
-                    ></input>
+                <div className='form_form'>
 
-                    <button onClick={guardarEstado} className="form_button">Guarda estado</button>
+                    <div className='form_input'>
+                        
+                        <input className='form_input'
+                            id="nombre"
+                            value={nombre}
+                            onChange={cambiarNombre}
+                        ></input>
+                    </div>
+
+                    <button onClick={guardarEstado} className="form_button">Save state</button>
                 </div>
 
             </div>
@@ -58,6 +60,7 @@ function App() {
 }
 
 export default App;
+
 
 ///////////////////////////////////File = App.CSS en directorio src
 
