@@ -34,15 +34,24 @@ function App() {
 
         <div className='App'>
          
-            <h2>Formulario</h2>
-            <h3>Mira los valores que muestra console.log</h3> 
-            <label>Nombre: </label>
-            <input id="nombre" name="nombre" value={nombre} onChange={cambiarNombre}></input>
-            <label>Id: </label>
-            <input id="id" name="id" value={id} onChange={cambiarId}></input>
-                    
-            <button onClick={guardarClick}>GuardaEstado Nombre</button>
-            <button onClick={guardarClick}>GuardaEstado Id</button>
+            <h3>Formulario con estados y funciones.</h3>
+            
+            <div>
+                <label>Nombre: </label>
+                    <input id="nombre" name="nombre" value={nombre} onChange={cambiarNombre}></input>
+            </div>
+            
+            <div>
+                <label>Id: </label>
+                    <input id="id" name="id" value={id} onChange={cambiarId}></input>
+            </div>  
+            <div>  
+                <button onClick={guardarClick}>Guarda estado Nombre</button>
+            </div>
+            <div>
+                <button onClick={guardarClick}>Guarda estado Id</button>
+            </div>
+            <h5>Mira los valores que muestra console.log</h5> 
                       
 
         </div>
