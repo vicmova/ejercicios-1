@@ -62,7 +62,6 @@ export default App;
 ///////////////////////////////////File = App.CSS en directorio src
 
 
-
 .form_container {
     padding: 20px;
 }
@@ -74,7 +73,7 @@ export default App;
 }
 
 .form_title {
-  color: rgb(163, 160, 160);
+  color: rgb(200, 197, 197);
   padding-top: 10px;
   padding-left: 5px;
   font-size: 40px;
@@ -86,7 +85,7 @@ export default App;
   width: 100%;
   height: 650px;
   background-size: cover;
-  background-color: rgb(251, 246, 246);
+  background-color: rgb(243, 236, 236);
 }
 
 .form_form {
@@ -117,6 +116,13 @@ export default App;
   width: 100%;
   height: 40px;
   background-color: rgb(201, 194, 194);
-
+  position: relative;
+  top: 20%;
+  font-size: 20px;
+  font-weight: 600;
+  color: white;
+  text-shadow: 2px 2px 2px black;
 
 }
+
+
