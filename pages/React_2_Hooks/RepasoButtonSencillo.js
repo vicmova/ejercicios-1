@@ -11,7 +11,7 @@ export default function Repaso(){
         console.log("Clicks desde el button: ", {cont2});
 
     //suma los clicks del botón1+botón2
-    const total= (cont + cont2);
+    const total = (cont + cont2);
         
 
     return(
