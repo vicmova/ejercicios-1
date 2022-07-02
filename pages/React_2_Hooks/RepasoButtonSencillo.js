@@ -2,35 +2,80 @@ import React,{useState} from "react";
 
 export default function Repaso(){
 
-    const[cont, setCont]=useState(0);
-        
-        console.log("Clicks desde el button: ", {cont});
+    const[color,setColor] = useState('fondoAzul');
 
-    const[cont2, setCont2]=useState(0);
-        
-        console.log("Clicks desde el button: ", {cont2});
+    const comprobarClick = (e) => {
 
-    //suma los clicks del botón1+botón2
-    const total = (cont + cont2);
+        const {value} = e.target
+        
+            const setColor = (value > 3) ? 'fondoRojo' : 'fondoAzul'
+                                
+        setColor(comprobarClick)
+    }
+
+
+    const[cont, setCont] = useState(0);
+        
+        //console.log("Clicks desde el button: ", {cont});
+
+    const[cont2, setCont2] = useState(0);
+        
+        //console.log("Clicks desde el button: ", {cont2});
+
+    const total = (parseInt(cont) + parseInt(cont2));
         
 
     return(
 
-        <div>
+        <>
+
+        <h1>Repaso!</h1>
+
+    
+        <div className={color} >
         
-            <h2>Repaso!</h2>
-
-            <h3>Has apretado el botón: {cont} veces.</h3>
+        
+            <h3>Has apretado el primer botón: {cont} veces.</h3>
             
-            <button onClick={()=> setCont(cont+1)}>Botón 1</button>
+                <button onClick={()=> setCont(cont +1)}> Botón 1 </button>
 
-            <h3>Has apretado el botón 2: {cont2} veces.</h3>
+            <h3>Has apretado el segundo botón: {cont2} veces.</h3>
             
-            <button onClick={()=> setCont2(cont2+1)}>Botón 2</button>
+                <button onClick={()=> setCont2(cont2 +1)}> Botón 2 </button>
 
             <h3>Total clicks: {total} veces.</h3>
             
+        
+
+            <style jsx> {`
+
+                    .fondoRojo {
+                    background-color: #ff0000;
+                    color: white;
+                    font-size: 1.2em;
+                    font-family: "Lucida Console"
+                    }
+                
+                    .fondoAzul {
+                    background-color: #0248c2;
+                    font-family: "Tahoma"
+                    }
+            
+                `} </style>
+            
+                <style jsx global>{`
+            
+            body {
+                    padding: 1em;
+                    margin: 0;
+                    font-family: -apple-system, Segoe UI, Roboto,sans-serif;
+                
+                `}</style>
+
+            
         </div>
+
+        </>
 
     );
 
