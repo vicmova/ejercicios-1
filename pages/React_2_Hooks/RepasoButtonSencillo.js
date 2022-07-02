@@ -37,11 +37,11 @@ export default function Repaso(){
         
             <h3>Has apretado el primer botón: {cont} veces.</h3>
             
-                <button onClick={()=> setCont(cont +1)}> Botón 1 </button>
+                <button onClick={()=> setCont(cont +1)} className="button1"> Botón 1 </button>
 
             <h3>Has apretado el segundo botón: {cont2} veces.</h3>
             
-                <button onClick={()=> setCont2(cont2 +1)}> Botón 2 </button>
+                <button onClick={()=> setCont2(cont2 +1)} className="button2"> Botón 2 </button>
 
             <h3>Total clicks: {total} veces.</h3>
             
@@ -57,8 +57,30 @@ export default function Repaso(){
                     }
                 
                     .fondoAzul {
-                    background-color: #0248c2;
+                    background-color: #b4c4e0;
                     font-family: "Tahoma"
+                    }
+
+                    .button1 {
+
+                        padding: 10px;
+                        background-color: white;
+                        font-style: roboto;
+                        border-radius: 30px;
+                        padding-left: 10px;
+                        padding-right: 10px
+                    
+                    }
+
+                    .button2 {
+
+                        padding: 10px;
+                        background-color: white;
+                        font-style: roboto;
+                        border-radius: 30px;
+                        padding-left: 10px;
+                        padding-right: 10px
+
                     }
             
                 `} </style>
