@@ -1,4 +1,5 @@
 //https://bluuweb.github.io/react-udemy/03-jsx/#jugando
+//agregar y descomentar en el head de index.html:  <!--<button class="bt" role="button">Haz Click!</button>-->
 import React, {useState} from "react";
 
 export default function Repaso(){
@@ -17,6 +18,15 @@ export default function Repaso(){
                 time+1
         ])
     }
+    
+    //Ejemplo operador de propagción: 
+    const arrayUno = ['Rojo', 'Verde']
+    const arrayDos = ['Amarillo', 'Azul']
+
+        const Unidos = [...arrayUno, ...arrayDos]
+            console.log(Unidos)
+    
+    
 
     return(
     
