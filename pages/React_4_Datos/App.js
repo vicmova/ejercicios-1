@@ -14,7 +14,7 @@ const App = (_) => {
       .get(`https://pokeapi.co/api/v2/pokemon/raticate`)
       .then((res) => {
         
-        console.log(res);
+        console.log(res.data);
             setName(res.data.name);
       })
   }, []);
@@ -23,8 +23,6 @@ const App = (_) => {
     axios
       .get(`https://pokeapi.co/api/v2/pokemon/raticate`)
       .then((res) => {
-        
-        console.log(res);
             setId(res.data.id);
       })
   }, []);
@@ -33,13 +31,11 @@ const App = (_) => {
     axios
       .get(`https://pokeapi.co/api/v2/pokemon/raticate`)
       .then((res) => {
-        
-        console.log(res);
             setWeight(res.data.weight);
       })
   }, []);
 
-  return <div><h3>nombre del Pokemon: {name} id: {id} peso: {weight}</h3></div>;
+  return <div><h3>nombre del Pokemon: {name}. Id: {id}. Peso: {weight}.</h3></div>;
   
 };
 export default App;
